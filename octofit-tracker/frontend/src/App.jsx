@@ -2,6 +2,8 @@ import { Link, Navigate, Route, Routes } from 'react-router-dom'
 import octofitLogo from '../../../docs/octofitapp-small.png'
 import './App.css'
 
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL
+
 function Overview() {
   return (
     <main className="container-fluid px-4 px-lg-5 py-5">
@@ -14,7 +16,7 @@ function Overview() {
         <div className="api-status mt-5">
           <span className="status-dot" aria-hidden="true" />
           <span className="fw-semibold">API tier</span>
-          <code>http://localhost:8000</code>
+          <code>{apiBaseUrl}</code>
         </div>
       </section>
     </main>
